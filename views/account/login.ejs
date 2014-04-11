@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>比特餐云——用户登录</title>
+    <link rel="stylesheet" href="/stylesheets/login_style.css" type="text/css" />
+    <script type="text/javascript" src="/libs/jquery/jquery.js"></script>
+</head>
+
+<body>
+<div class="con1">
+    <div class="logo"><a href="/"><img src="images/logo.png" /></a></div>
+    <div class="tit">
+        <div class="tit_l">用户登录</div>
+        <a class="tit_r" href="/register" style="text-decoration:none;">免费注册</a>
+        <div class="clear"></div>
+    </div>
+    <div class="log_con">
+        <% if(locals.err) { %>
+            <div class="tit4"><%= err %></div>
+        <% } %>
+        <form action="/login" method="post">
+            <div class="tit1"><span class="tred1">*</span> 用户名/Email</div>
+            <div class="tit2"><input name="username" type="text" class="inp1" /></div>
+            <div class="tit1"><span class="tred1">*</span> 登录密码</div>
+            <div class="tit2"><input name="password" type="password" class="inp1" /></div>
+            <div class="tit3"><input name="" type="checkbox" value="" />
+                记住我&nbsp;&nbsp;<span class="tblue1">忘记密码?</span></div>
+            <div class="btn twhite1" onclick="$('form').submit()">立即登录</div>
+        </form>
+    </div>
+    <div class="log_con_b"></div>
+    <div class="bot">
+        <div class="bot1 twhite1"><span>关于我们 | 免责声明 | 联系我们 | 网站地图 | 使用帮助</span>©版权所有：厦门领驰信息 备案号:闽ICP备12012536号</div>
+    </div>
+</div>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/iepng.js" ></script>
+<![endif]-->
+</body>
+</html>

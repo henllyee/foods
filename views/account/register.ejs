@@ -1,0 +1,47 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>领吃-注册</title>
+    <link rel="stylesheet" href="/stylesheets/login_style.css" type="text/css" />
+    <script type="text/javascript" src="/libs/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/libs/validate/jquery.validate.js"></script>
+    <script type="text/javascript" src="/libs/validate/jquery.validate.extension.js"></script>
+    <script type="text/javascript" src="/javascripts/account/register.js"></script>
+</head>
+
+<body>
+<div class="con">
+    <div class="logo">
+      <a href="/"><a href="/"><img src="/images/logo.png" /></a></a>
+    </div>
+    <div class="tit">
+        <a class="tit_l1" href="/login" style="text-decoration:none;">用户登录</a>
+        <div class="tit_r1">免费注册</div>
+        <div class="clear"></div>
+    </div>
+    <div class="log_con">
+        <form action="/register" method="post">
+            <div class="tit1"><span class="tred1">*</span> 用户名</div>
+            <div class="tit2"><input name="username" id="username" type="text" class="inp1" /></div>
+            <div class="tit1"><span class="tred1">*</span> 密码</div>
+            <div class="tit2"><input name="password" type="password" class="inp1" id="password" /></div>
+            <div class="tit1"><span class="tred1">*</span> 确认密码</div>
+            <div class="tit2"><input name="makepassword" type="password" class="inp1" /></div>
+            <div class="tit1"><span class="tred1">*</span> 电子邮件</div>
+            <div class="tit2"><input name="email" id="email" type="text" class="inp1" /></div>
+
+            <div class="btn twhite1" id="register">立即注册</div>
+        </form>
+    </div>
+    <div class="log_con_b"></div>
+    <div class="bot">
+        <div class="bot1 twhite1"><span>关于我们 | 免责声明 | 联系我们 | 网站地图 | 使用帮助</span>©版权所有：厦门领驰信息 备案号:闽ICP备12012536号</div>
+    </div>
+</div>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/iepng.js" ></script>
+<![endif]-->
+</body>
+</html>
