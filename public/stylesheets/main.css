@@ -14,3 +14,88 @@ label.error{
     color:red;
     line-height: 40px;
 }
+.btn-green {
+    color:#fff;
+    background-color:#1cac7c;
+    border-bottom-color:#15805c
+}
+.btn-green.active,.btn-green:active,.btn-green:focus,.btn-green:hover,.open .dropdown-toggle.btn-green {
+    color:#fff;
+    background-color:#17976b;
+    border-bottom-color:#106b4c
+}
+.btn-fw {
+    display:inline-block;
+    margin-bottom:0;
+    font-size:15px;
+    font-weight:400;
+    line-height:1.428571429;
+    text-align:center;
+    vertical-align:middle;
+    cursor:pointer;
+    white-space:nowrap;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+    width:110px;
+    padding:8.5px 0;
+    border:0;
+    border-top:1px solid transparent;
+    border-bottom:1px solid transparent;
+    border-radius:2px
+}
+ #identity_card_upload .outer_block {
+    padding:4px;
+    border:1px solid #CCC;
+    border-radius:4px;
+    margin-right:15px
+}
+ #identity_card_upload .outer_block .inner_block {
+    width:136px;
+    height:82px;
+    position:relative
+}
+ #identity_card_upload .outer_block .inner_block.front {
+    background-image:url(../images/identity_card_front.jpg)
+}
+ #identity_card_upload .outer_block .inner_block.back {
+    background-image:url(../images/identity_card_back.jpg)
+}
+ #identity_card_upload .outer_block .inner_block img {
+    width:100%;
+    height:100%
+}
+ #identity_card_upload .outer_block .inner_block .loading {
+    width:26px;
+    height:26px;
+    position:absolute;
+    bottom:50%;
+    left:50%;
+    margin-left:-13px;
+    display:none
+}
+ #identity_card_upload .outer_block .inner_block .btn-fw {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:3px 0;
+    font-size:13px
+}
+ #identity_card_upload .outer_block .inner_block input[type=file] {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    filter:alpha(opacity=0);
+    cursor:pointer
+}
+ #identity_card_upload #identity_card_upload_notice {
+    font-size:16px;
+    margin:13px 0;
+    padding:0 0 0 20px
+}

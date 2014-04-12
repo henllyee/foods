@@ -63,20 +63,35 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-            <div class="text-right" style="float: left">
-                <img src="images/identity_card_front.jpg" alt="" class="img-thumbnail">
-                   </div>
-            <div class=" text-left" style="float: left;margin-left: 10px;" >
-                <img src="images/identity_card_front.jpg" alt="" class="img-thumbnail">
-            </div>
-            <div class="col-xs-3 text-left" style="margin-left: 0px;">
-            <ul id="identity_card_upload_notice " class="pull-left">
-                <li>须是清晰彩色原件</li>
-                <li>可以是扫描或数码照片</li>
-                <li>上传文件大小不超过2M</li>
-            </ul>
-             </div>
+                <div id="identity_card_upload">
+                    <div class="outer_block pull-left">
+                        <div class="inner_block front">
+
+                            <a class="btn-fw btn-green">
+                                <span>上传正面</span>
+                                <input type="file" name="image" />
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="outer_block pull-left">
+                        <div class="inner_block back">
+
+                            <a class="btn-fw btn-green">
+                                <span>上传背面</span>
+                                <input type="file" name="image" />
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
+                <ul id="identity_card_upload_notice " class="pull-left">
+                    <li>须是清晰彩色原件</li>
+                    <li>可以是扫描或数码照片</li>
+                    <li>上传文件大小不超过2M</li>
+                </ul>
+             </div>
+
         </div>
         <div class="row" style="margin-top: 20px;">
             <div class="col-xs-12">
