@@ -11,7 +11,22 @@ $(function(){
             error.insertBefore(element.parent());
         }
     });
-
+    $('#image1').fileupload({
+        dataType:'json',
+        done:function(e,data){
+            $.each(data.result, function (index, file) {
+                if(data.result.result===true){
+                    $('#btnUp').text('重新上传');
+                    $('img',$('#btnUp').parent().parent()).remove();
+                    $('#btnUp').parent().before('<img src="'+data.result.image+'"/>')
+                }
+            });
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#btnUp').text('上传：'+progress+'%');
+        }
+    });
 });
 
 var validateExpress={

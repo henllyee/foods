@@ -4,6 +4,7 @@
 var model = require('../models');
 var Store_Auth = model.Store_Auth;
 var StoreAuthProxy = require('../Proxy').StoreAuthProxy;
+var formidable = require('formidable');
 /**
  * 展示申请界面 */
 exports.showApply=function(req,res){
@@ -23,8 +24,20 @@ exports.apply=function(req,res,next){
     store_auth.phone = req.body.phone;
     store_auth.address = req.body.address;
     store_auth.workflow = [{status:'apply',make_date:Date.now()}];
+
     StoreAuthProxy.newAndSave(store_auth,function(err){
         if(err) next(err);
         res.redirect('/');
+    });
+};
+
+
+exports.auth_image = function(req,res,next){
+    var patharray = req.files.image1.path.split('\\');
+    var imagename = patharray[patharray.length-1];
+    res.json({
+        result:true,
+        message:'上传成功！',
+        image:imagename
     });
 };

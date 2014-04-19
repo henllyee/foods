@@ -6,6 +6,7 @@ var account = require('./controllers/account.js');
 var place = require('./controllers/place.js');
 var store = require('./controllers/store.js')
 
+
 module.exports=function(app){
     app.get('/',index.showIndex);
     app.get('/login',account.showLogin);
@@ -21,5 +22,7 @@ module.exports=function(app){
     //餐厅申请
     app.get('/apply',store.showApply);
     app.post('/apply',store.apply);
+
+    app.post('/auth/post_image',store.auth_image);
 };
 

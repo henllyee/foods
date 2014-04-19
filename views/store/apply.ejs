@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="container container-9" >
-    <form method="post" action="/apply" id="auth-form">
+    <form method="post" action="/apply" enctype="multipart/form-data" id="auth-form">
         <div class="row">
             <div class="col-xs-6">
                 <div class="form-group">
@@ -61,15 +61,16 @@
                   </div>
               </div>
         </div>
+
         <div class="row">
             <div class="col-xs-12">
                 <div id="identity_card_upload">
                     <div class="outer_block pull-left">
-                        <div class="inner_block front">
+                        <div class="inner_block front" >
 
                             <a class="btn-fw btn-green">
-                                <span>上传正面</span>
-                                <input type="file" name="image" />
+                                <span id="btnUp">上传正面</span>
+                                <input type="file" name="image1" id="image1" data-url="/auth/post_image" />
                             </a>
 
                         </div>
@@ -79,7 +80,7 @@
 
                             <a class="btn-fw btn-green">
                                 <span>上传背面</span>
-                                <input type="file" name="image" />
+                                <input type="file" name="image2" id="image2" date-url="/auth/post_image"/>
                             </a>
 
                         </div>
@@ -104,7 +105,10 @@
     </form>
 </div>
 </div>
-<script src="/libs/validate/jquery.validate.js" type="application/javascript"></script>
-<script src="/libs/validate/jquery.validate.extension.js" type="application/javascript"></script>
+<script src="/libs/validate/jquery.validate.js" type="text/javascript"></script>
+<script src="/libs/validate/jquery.validate.extension.js" type="text/javascript"></script>
+<script src="/libs/jquery-upload/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="/libs/jquery-upload/jquery.iframe-transport.js" type="text/javascript"></script>
+<script src="/libs/jquery-upload/jquery.fileupload.js" type="text/javascript"></script>
 <script src="/javascripts/store/auth.js" type="application/javascript"></script>
 <%- include footer.ejs %>
