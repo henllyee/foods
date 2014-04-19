@@ -12,7 +12,6 @@
     "mongoose":"*",
     "MD5":"*",
     "validator": "0.3.7",
-    "async":"*",
-    "formidable":"*"
+    "async":"*"
   }
 }
